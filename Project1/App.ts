@@ -1,21 +1,32 @@
-const convt = (): void => {
-  let inputElement = document.querySelector<HTMLInputElement>('#data');
-  if (inputElement) {
-    let kms: number = parseFloat(inputElement.value || '0');
-    if (isNaN(kms)) {
-      kms = 0;
-    }
-    const kmToMiles: number = 0.621371;
-    let miles: number = kms * kmToMiles;
-    console.log(miles);
-
-    let resultElement = document.getElementById('res');
-    if (resultElement) {
-      resultElement.innerText = `${miles} miles`;
-    }
+function convert():void {
+  let kmsInput = document.getElementById('data') as HTMLInputElement;
+  let kms:number = parseFloat(kmsInput.value);
+  const factor:number = 0.621371;
+  let miles:number = kms*factor;
+  const resOut = document.getElementById('result');
+  if (resOut) {
+      resOut.innerText = `${miles.toFixed(2)} miles`;
   }
-};
+}
+(window as any).convert = convert;
+export{}
 
-(window as any).convt = convt;
 
-export {};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
