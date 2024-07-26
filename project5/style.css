@@ -1,0 +1,89 @@
+#card{
+  margin-left: 15rem;
+  margin-top: 8.5rem;
+  width: 60%;
+  background-color: rgb(69, 165, 248);
+  border-radius: 12px; 
+  padding: 20px;
+  color: rgb(55, 40, 184);
+}
+.boxs{
+  display: flex;
+  justify-content: center;
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 28px;
+  color: black;
+  background-color: #696763;
+}
+#box1{
+  border: 1px solid rgb(97, 97, 97);
+  background-color: rgb(226, 226, 226);
+  padding: 15px 25px 15px 25px;
+  margin: 0 20px 0 20px;
+  border-radius: 10px;
+}
+#box2{
+  border: 1px solid rgb(97, 97, 97);
+  background-color: rgb(226, 226, 226);
+  padding: 15px 25px 15px 25px;
+  margin: 0 20px 0 20px;
+  border-radius: 10px;
+}
+#box3{
+  border: 1px solid rgb(97, 97, 97);
+  background-color: rgb(226, 226, 226);
+  padding: 15px 25px 15px 25px;
+  margin: 0 20px 0 20px;
+  border-radius: 10px;
+}
+.contnt{
+display: flex;
+justify-content: space-around;
+}
+.contnt2{
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+margin: 5px;
+}
+.contnt3{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#check{
+  background-color: rgb(55, 40, 184);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  position: relative;
+  margin-left: 4px;
+}
+#start{
+  background-color: rgb(55, 40, 184);
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  position: relative;
+  margin-right: 4px;
+  padding: 15px 25px 15px 25px;
+}
+#start:hover{
+  background-color: rgb(37, 66, 230);
+}
+#start:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+#check:hover{
+  background-color: rgb(37, 66, 230);
+}
+#check:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
