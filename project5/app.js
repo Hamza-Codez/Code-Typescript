@@ -1,25 +1,26 @@
-function Find() {
-    var _a, _b, _c;
-    var p1 = parseFloat((_a = prompt('Enter the first value')) !== null && _a !== void 0 ? _a : '0');
-    var p2 = parseFloat((_b = prompt('Enter the second value')) !== null && _b !== void 0 ? _b : '0');
-    var p3 = parseFloat((_c = prompt('Enter the third value')) !== null && _c !== void 0 ? _c : '0');
-    var a = document.getElementById('box1');
-    var b = document.getElementById('box2');
-    var c = document.getElementById('box3');
-    if (a)
-        a.innerText = isNaN(p1) ? "" : p1.toString();
-    if (b)
-        b.innerText = isNaN(p2) ? "" : p2.toString();
-    if (c)
-        c.innerText = isNaN(p3) ? "" : p3.toString();
-    var reslt = Math.max(p1, p2, p3);
-    Draw(reslt);
-    return reslt;
-}
-function Draw(reslt) {
-    var show = document.getElementById('hashbrown');
-    if (show) {
-        show.innerText = "The result says that the maximum among the three is ".concat(reslt);
+function Draw() {
+    var bx1 = document.getElementById('box1');
+    var bx2 = document.getElementById('box2');
+    var bx3 = document.getElementById('box3');
+    var Input1 = parseFloat(bx1.value);
+    var Input2 = parseFloat(bx2.value);
+    var Input3 = parseFloat(bx3.value);
+    var max = Math.max(Input1, Input2, Input3);
+    var giveMax = document.getElementById('hashbrown');
+    if (giveMax) {
+        giveMax.textContent = "The maximum among ".concat(Input1, ", ").concat(Input2, ", and ").concat(Input3, " is ").concat(max);
     }
 }
-window.Find = Find;
+// Set up event listeners when the document is ready
+function setupEventListeners() {
+    var clearButton = document.getElementById('clear');
+    if (clearButton) {
+        clearButton.addEventListener('click', function () {
+            location.reload();
+        });
+    }
+}
+// Run setupEventListeners when the document is fully loaded
+document.addEventListener('DOMContentLoaded', setupEventListeners);
+// Expose the Draw function to the global scope
+window.Draw = Draw;

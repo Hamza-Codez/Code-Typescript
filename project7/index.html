@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table Generate</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: rgba(0, 0, 0, 0.801);">
+  <div id="card">
+    <div class="header">
+      <h3>Enter your number here! And I will generate the Table!</h3>
+    </div>
+    <div class="ibox">
+      <input type="number" class="ibx" id="ib1" placeholder="Enter Your Number here!">
+      <input type="number" class="ibx" id="ib2" placeholder="Enter Your Number here!">
+      <input type="number" class="ibx" id="ib3" placeholder="Enter Your Number here!">
+      <input type="number" class="ibx" id="ib4" placeholder="Enter Your Number here!">
+    </div>
+    <div class="tables">
+      <div id="box1" class="tbx"><h4>Table 1</h4></div>
+      <div id="box2" class="tbx"><h4>Table 2</h4></div>
+      <div id="box3" class="tbx"><h4>Table 3</h4></div>
+      <div id="box4" class="tbx"><h4>Table 4</h4></div>
+    </div>
+    <div class="footer">
+      <button class="btn" onclick="drawTable()" id="check">Create Tables</button>
+      <button class="btn" id="reload">Create New</button>
+    </div>
+  </div>
+</body>
+<script src="app.js"></script>
+</html>

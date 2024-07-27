@@ -1,0 +1,85 @@
+#card{
+  flex-wrap: wrap;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: rgb(180, 132, 74);
+  margin: 1rem 5rem 2rem 5rem;
+  height: 36.5rem;
+  overflow: hidden;
+}
+.header{
+  flex-wrap: wrap;
+  text-align: center;
+  background-color: hsla(0, 7%, 33%, 0.745);
+  color: white;
+  margin-top: 0;
+  padding-top: 0.1px;
+  padding-bottom: 0.1px;
+  font-weight:lighter;
+  font-size:larger;
+}
+.ibox{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 13px 23px 5px 23px;
+  border: 1.5px solid #5a4e4ebe;
+  border-radius: 6px;
+  padding: 4px 0 4px 0;
+  background-color: #948e8e;
+  
+}
+.ibox .ibx {
+  margin: 5px;
+  padding: 11px;
+  border: 1px solid #a5a2a2;
+  border-radius: 7px;
+  width: calc(22% - 10px);
+  background-color: #ececec;
+}
+.tables{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 16px 23px 10px 23px;
+  border: 1.5px solid #5a4e4ebe;
+  border-radius: 6px;
+  padding: 9px 0px 0px 0px;
+  background-color: #948e8e;
+;
+  height: 21rem;
+}
+.tables .tbx {
+  margin-top: 5px;
+  margin-bottom: 12px;
+  padding: 11px;
+  border: 1px solid #a5a2a2;
+  border-radius: 7px;
+  width: calc(21% - 10px);
+  background-color: #ecececea;
+}
+.footer{
+  display: flex;
+  justify-content: center;
+  background-color: hsla(0, 5%, 18%, 0.623);
+  margin-top: 4px;
+  padding-bottom: 16px;
+  padding-top: 13px;
+}
+.btn{
+  background-color: rgba(230, 157, 63, 0.808);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  position: relative;
+  margin:0 5px 0 5px;
+}
+.btn:hover{
+  background-color: #bb7e2d;
+}
+.btn:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}

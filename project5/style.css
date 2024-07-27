@@ -17,6 +17,7 @@
   background-color: #696763;
 }
 #box1{
+  display: block;
   border: 1px solid rgb(97, 97, 97);
   background-color: rgb(226, 226, 226);
   padding: 15px 25px 15px 25px;
@@ -41,13 +42,6 @@
 display: flex;
 justify-content: space-around;
 }
-.contnt2{
-display: flex;
-justify-content: center;
-align-items: center;
-padding: 10px;
-margin: 5px;
-}
 .contnt3{
   display: flex;
   justify-content: center;
@@ -63,27 +57,39 @@ margin: 5px;
   position: relative;
   margin-left: 4px;
 }
-#start{
-  background-color: rgb(55, 40, 184);
-  border: none;
-  border-radius: 5px;
-  color: aliceblue;
-  cursor: pointer;
-  position: relative;
-  margin-right: 4px;
-  padding: 15px 25px 15px 25px;
-}
-#start:hover{
-  background-color: rgb(37, 66, 230);
-}
-#start:active {
-  transform: scale(0.8);
-  box-shadow: 0 0 5px black;
-}
 #check:hover{
   background-color: rgb(37, 66, 230);
 }
 #check:active {
   transform: scale(0.8);
   box-shadow: 0 0 5px black;
+}
+#clear{
+  background-color: rgb(55, 40, 184);
+  border: none;
+  padding: 15px;
+  border-radius: 5px;
+  color: aliceblue;
+  cursor: pointer;
+  position: relative;
+  margin-left: 4px;
+}
+#clear:hover{
+  background-color: rgb(37, 66, 230);
+}
+#clear:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+.contnt2,
+#hashbrown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 12px;
+  background-color: #696763;
+  color: aliceblue;
+  margin: 30px 80px 20px 80px;
+  padding: 20px;
 }
