@@ -1,0 +1,93 @@
+body{
+  background-color: rgba(0, 0, 0, 0.767);
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
+}
+.card{
+  height: 17rem;
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-start: 6rem;
+  margin-inline: auto;
+  background-color: #50729c;
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+.card .inpt {
+  padding-inline: 13px;
+  padding-block-start: 3rex;
+  padding-block-end: 2rex;
+  display: flex;
+  justify-content: space-around;
+}
+.card .inpt .bx{
+  border-radius: 4px;
+  width: 14rex;
+  height: 4rex;
+  padding-block: 5px;
+  margin-inline: 9px;
+}
+
+.card .header h2 {
+  background-color: #789bfd;
+  border: 1px solid rgb(97, 116, 116);
+  border-radius: 12px;
+  padding: 11px;
+  padding-inline: 38px;
+  margin-top: 2.5rem;
+  margin-bottom: 2px;
+}
+
+.card .btn {
+  margin-top: 1rex;
+  padding: 0%;
+}
+.card .btn #chek {
+  width: 12rex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3eaff0;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  padding-block: 9px;
+}
+.btn #chek:hover{
+  background-color:#2bc0e6;
+  border-radius: 7px;
+}
+.btn:active {
+  transform: scale(0.8);
+  box-shadow: 0 0 5px black;
+}
+
+.results{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 3rex;
+}
+
+.results .ans {
+  background-color: #50729c;
+  color: white;
+  padding: 3px;
+  border-radius: 11px;
+  width: 32%;
+}
+
+.results .indicator .bxo{
+  width: 12rex;
+  padding-block: 2rex ;
+  padding-inline: 4rex;
+  border-radius: 2px;
+}
+
