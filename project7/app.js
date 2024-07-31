@@ -1,51 +1,31 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function drawTable() {
-    var inputbar1 = document.getElementById('ib1');
-    var inputbar2 = document.getElementById('ib2');
-    var inputbar3 = document.getElementById('ib3');
-    var inputbar4 = document.getElementById('ib4');
-    var ib1 = parseFloat(inputbar1.value);
-    var ib2 = parseFloat(inputbar2.value);
-    var ib3 = parseFloat(inputbar3.value);
-    var ib4 = parseFloat(inputbar4.value);
-    var dt1 = document.getElementById('box1');
-    var dt2 = document.getElementById('box2');
-    var dt3 = document.getElementById('box3');
-    var dt4 = document.getElementById('box4');
-    if (dt1)
-        dt1.innerText = "Table 1\n";
-    if (dt2)
-        dt2.innerText = "Table 2\n";
-    if (dt3)
-        dt3.innerText = "Table 3\n";
-    if (dt4)
-        dt4.innerText = "Table 4\n";
+    var _a = ['ib1', 'ib2', 'ib3', 'ib4'].map(function (id) { return parseFloat(document.getElementById(id).value); }), ib1 = _a[0], ib2 = _a[1], ib3 = _a[2], ib4 = _a[3];
+    var _b = ['box1', 'box2', 'box3', 'box4'].map(function (id) { return document.getElementById(id); }), dt1 = _b[0], dt2 = _b[1], dt3 = _b[2], dt4 = _b[3];
+    var elements = [dt1, dt2, dt3, dt4];
+    var inputs = [ib1, ib2, ib3, ib4];
+    var texts = ["Table 1\n", "Table 2\n", "Table 3\n", "Table 4\n"];
+    elements.forEach(function (element, index) {
+        if (element) {
+            element.innerText = texts[index];
+        }
+    });
+    var _loop_1 = function (m) {
+        elements.forEach(function (element, index) {
+            var input = inputs[index];
+            if (element) {
+                if (!isNaN(input)) {
+                    element.innerText += "".concat(input, "*").concat(m, " = ").concat(input * m, "\n");
+                }
+                else {
+                    element.innerText = "".concat(input, " is not a Number");
+                }
+            }
+        });
+    };
     for (var m = 1; m <= 10; m++) {
-        if (dt1 && !isNaN(ib1)) {
-            dt1.innerText += "".concat(ib1, " * ").concat(m, " = ").concat(ib1 * m, "\n");
-        }
-        else if (dt1) {
-            dt1.innerText = "Please enter a number";
-        }
-        if (dt2 && !isNaN(ib2)) {
-            dt2.innerText += "".concat(ib2, " * ").concat(m, " = ").concat(ib2 * m, "\n");
-        }
-        else if (dt2) {
-            dt2.innerText = "Please enter a number";
-        }
-        if (dt3 && !isNaN(ib3)) {
-            dt3.innerText += "".concat(ib3, " * ").concat(m, " = ").concat(ib3 * m, "\n");
-        }
-        else if (dt3) {
-            dt3.innerText = "Please enter a number";
-        }
-        if (dt4 && !isNaN(ib4)) {
-            dt4.innerText += "".concat(ib4, " * ").concat(m, " = ").concat(ib4 * m, "\n");
-        }
-        else if (dt4) {
-            dt4.innerText = "Please enter a number";
-        }
+        _loop_1(m);
     }
 }
 function setEventListeners() {
