@@ -1,46 +1,34 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 function check() {
-    var inputElement = document.getElementById('number');
-    var val = parseFloat(inputElement.value);
-    var checker = Math.sign(val);
+    var inputElement = parseFloat(document.getElementById('number').value);
+    var checker = Math.sign(inputElement);
     var outElement = document.getElementById('output');
     if (outElement) {
-        if (isNaN(val)) {
-            outElement.innerText = "".concat(inputElement.value, " is not a number");
+        if (isNaN(inputElement)) {
+            outElement.innerText = "".concat(inputElement, " is not a number");
         }
-        else if (checker === 1) {
-            outElement.innerText = "".concat(val, " is a Positive number");
-        }
-        else if (checker === -1) {
-            outElement.innerText = "".concat(val, " is a Negative number");
-        }
-        else if (checker === 0) {
-            outElement.innerText = "".concat(val, " has no +/- sign");
+        else {
+            var signText = checker === 1 ? 'Positive' : checker === -1 ? 'Negative' : 'has no +/- sign';
+            outElement.innerText = "".concat(inputElement, " is a ").concat(signText, " number");
         }
     }
 }
 window.check = check;
 function genRandom() {
-    var ranNum1 = Math.random();
-    var ranNum2 = Math.random() * (100 - 1) + 1;
-    var ranNum3 = Math.floor(Math.random() * (1000 - 1) + 1);
-    var ranNum4 = Math.floor(Math.random() * (4000 - 1000) + 1000);
-    var onclik1 = document.getElementById('num1');
-    var onclik2 = document.getElementById('num2');
-    var onclik3 = document.getElementById('num3');
-    var onclik4 = document.getElementById('num4');
-    if (onclik1) {
-        onclik1.innerText = "Just a Random Number is ".concat(ranNum1);
-    }
-    if (onclik2) {
-        onclik2.innerText = "Random Number between 1 and 100 is ".concat(ranNum2);
-    }
-    if (onclik3) {
-        onclik3.innerText = "Integer in a range of 1-1000 is ".concat(ranNum3);
-    }
-    if (onclik4) {
-        onclik4.innerText = "4 digit Otp generated is ".concat(ranNum4);
-    }
+    var _a = [Math.random(), Math.random() * 99 + 1, Math.floor(Math.random() * 999) + 1, Math.floor(Math.random() * 3000) + 1000], ranNum1 = _a[0], ranNum2 = _a[1], ranNum3 = _a[2], ranNum4 = _a[3];
+    var _b = ['num1', 'num2', 'num3', 'num4'].map(function (id) { return document.getElementById(id); }), oc1 = _b[0], oc2 = _b[1], oc3 = _b[2], oc4 = _b[3];
+    var onclicks = [oc1, oc2, oc3, oc4];
+    var messages = [
+        "Just a Random Number is ".concat(ranNum1),
+        "Random Number between 1 and 100 is ".concat(ranNum2),
+        "Integer in a range of 1-1000 is ".concat(ranNum3),
+        "4 digit OTP generated is ".concat(ranNum4)
+    ];
+    onclicks.forEach(function (element, index) {
+        if (element) {
+            element.innerText = messages[index];
+        }
+    });
 }
 window.genRandom = genRandom;
