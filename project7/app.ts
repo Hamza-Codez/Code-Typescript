@@ -1,7 +1,9 @@
 function drawTable(){
 
-  const [ib1, ib2, ib3, ib4] = ['ib1','ib2','ib3','ib4'].map(id => parseFloat((document.getElementById(id) as HTMLInputElement).value))
-  const [dt1,dt2,dt3,dt4] = ['box1','box2','box3','box4'].map(id => document.getElementById(id));
+  const [ib1, ib2, ib3, ib4] = ['ib1','ib2','ib3','ib4']
+  .map(id => parseFloat((document.getElementById(id) as HTMLInputElement).value));
+  const [dt1,dt2,dt3,dt4] = ['box1','box2','box3','box4']
+  .map(id => document.getElementById(id));
 
   const elements = [dt1, dt2, dt3, dt4];
   const inputs = [ib1, ib2, ib3, ib4];
